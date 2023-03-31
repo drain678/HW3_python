@@ -1,8 +1,8 @@
 # создаем функцию
 def can_eat(horse, figure):
     # присвоим переменным координаты из кортежей
-    rowH, colH = horse
-    rowF, colF = figure
+    rowH, colH = int(horse[0]), int(horse[1])
+    rowF, colF = int(figure[0]), (figure[1])
     # сравниваем координаты фигур и проверяем может ли конь съесть её
     # первое условие для вертикальной буквы г
     if abs(colH - colF) == 1 and abs(rowH - rowF) == 2:
@@ -15,5 +15,5 @@ def can_eat(horse, figure):
     return False
 
 
-result = can_eat(input(), input())
+result = can_eat((int(input()), int(input())), (int(input()), int(input())))
 print(result)
